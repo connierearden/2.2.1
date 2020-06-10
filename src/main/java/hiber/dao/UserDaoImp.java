@@ -36,11 +36,11 @@ public class UserDaoImp implements UserDao {
                 .getSingleResult();
     }
 
-/*    @Override
-    public User getUserByCar(String name) {
-        return  (User) sessionFactory.getCurrentSession()
-                .createQuery("FROM User u JOIN Car c on c.id = u.car_id WHERE c.name = :name")
-                .setParameter("name", name)
+    @Override
+    public User getUserByCar(Car car) {
+        return (User)sessionFactory.getCurrentSession()
+                .createQuery("from User u where u.car = :car")
+                .setParameter("car", car)
                 .getSingleResult();
-    }*/
+    }
 }

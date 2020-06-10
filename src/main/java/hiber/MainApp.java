@@ -37,7 +37,7 @@ public class MainApp {
         }
 
         System.out.println(
-               userService.getCarByName("BMW", 12345)
+               userService.getUserByCar(userService.getCarByName("BMW", 12345))
         );
 
 

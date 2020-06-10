@@ -78,4 +78,14 @@ public class User {
    public void setEmail(String email) {
       this.email = email;
    }
+
+   @Override
+   public String toString() {
+      return String.format("USER \n id = %d\n first_name = %s\n last_name = %s\n email = %s\n" ,
+              id,
+              firstName,
+              lastName,
+              email
+      );
+   }
 }
